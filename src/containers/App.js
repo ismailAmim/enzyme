@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { setSearchField, requestRobots } from '../actions';
 
-import CardList from '../components/CardList';
-import SearchBox from '../components/SearchBox';
-import Scroll from '../components/Scroll';
-import ErrorBoundry from '../components/ErrorBoundry';
-import Header from '../components/Header';
+// import CardList from '../components/CardList';
+// import SearchBox from '../components/SearchBox';
+// import Scroll from '../components/Scroll';
+// import ErrorBoundry from '../components/ErrorBoundry';
+// import Header from '../components/Header';
 
-import './App.css';
+import MainPage from '../components/MainPage';
+//import './App.css';
 
 const mapStateToProps = (state) => {
   return {
@@ -26,18 +27,18 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 class App extends Component {
-  constructor() {
+  /* constructor() {
     super()
     this.state = {
       count: 1
     }
-  }
+  } 
   componentDidMount() {
     this.props.onRequestRobots();
   }
-
+*/
   render() {
-    const { robots, searchField, onSearchChange, isPending } = this.props;
+    /* const { robots, searchField, onSearchChange, isPending } = this.props;
     const filteredRobots = robots.filter(robot => {
       return robot.name.toLowerCase().includes(searchField.toLowerCase());
     })
@@ -53,7 +54,8 @@ class App extends Component {
           }
         </Scroll>
       </div>
-    );
+    ); */
+    return <MainPage {...this.props} />;
   }
 }
 
